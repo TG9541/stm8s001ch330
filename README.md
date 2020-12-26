@@ -8,7 +8,7 @@ The STM8S001J3M3 UART works in "half-duplex" mode and the CH330N USB-UART is in 
 
 ![dongle](doc/stm8s001ch330_ray.png)
 
-The SMD USB-A connector is "China standard" (e.g. [here](https://www.aliexpress.com/item/32900067411.html)).
+The SMD USB-A connector is "China standard" (e.g. [here](https://www.aliexpress.com/item/32900067411.html), refer to the BOM is in the docs folder).
 
 ![schematics](doc/stm8s001ch330.png)
 
@@ -23,7 +23,15 @@ Pin|Description
 5|Low Side switch (LS NPN) w/ 47R, e.g. for an IR LED @ 100mA)
 6|PC3 (same as LS NPN base, pin7, i.e. PC3, PC4, PC5)
 7|SWIM (pin8, i.e. PC6, PD1, PD3 and PD5)  
-8|PD6 (pin1, i.e. PA1, PD6) 
+8|PD6 (pin1, i.e. PA1, PD6)
+
+Example use-cases:
+
+* Pins 1, 2, 3 and 4 can be used for testing I2C modules w/ 5V supply (e.g. [STM8 eForth I2C Master](https://gist.github.com/TG9541/5c3405320794d91ef8129734a4bfc880#gistcomment-3565181))
+* Pins 1 and 5 can be used for a 100mA IR LED (e.g. [IR Remote Control](https://gist.github.com/TG9541/40b811c3a611eb02ba9e3693f99222ac))
+* Pins 1, 2 and 8 can be used for connecting an IR receiver
+* Pins 1, 2 and 3 can control a [WS2812 LED strip](https://gist.github.com/TG9541/1761fa86b425a0c909b7bd1cc8017c2b)
+* ...
 
 ![pcb](doc/stm8s001ch330_copper.png)
 
