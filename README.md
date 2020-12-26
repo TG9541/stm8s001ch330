@@ -4,7 +4,7 @@
 
 Dongle STM8S001J3M3 with CH330N USB-UART - best with [STM8 eForth](https://github.com/TG9541/stm8ef).
 
-The STM8S001J3M3 UART works in "half-duplex" mode and the CH330N USB-UART is in a matching wired-of configuration (D1). The internal pull-up of PD5/UARTTX/RX should be configured active (this is the default for the STM8 eForth [STSTM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image).
+The STM8S001J3M3 UART works in "half-duplex" mode and the CH330N USB-UART is in a matching wired-of configuration (D1). The internal pull-up of PD5/UARTTX/RX should be configured active (this is the default for the STM8 eForth [STM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image).
 
 ![dongle](doc/stm8s001ch330_ray.png)
 
@@ -31,8 +31,8 @@ Example use-cases:
 * Pins 1 and 5 can be used for a 100mA IR LED (e.g. [IR Remote Control](https://gist.github.com/TG9541/40b811c3a611eb02ba9e3693f99222ac))
 * Pins 1, 2 and 8 can be used for connecting an IR receiver
 * Pins 1, 2 and 3 can control a [WS2812 LED strip](https://gist.github.com/TG9541/1761fa86b425a0c909b7bd1cc8017c2b)
-* ...
+* [Learn programming Forth ...](https://github.com/TG9541/stm8ef/wiki/STM8-eForth-Programming)
 
 ![pcb](doc/stm8s001ch330_copper.png)
 
-The pcb shouldn't be too hard to hand-solder - I recommend beginning with D1, then U1 and U2, then the frong side SMD Q1 and passive components, then J1 and finally J2.
+The pcb shouldn't be too hard to hand-solder - I recommend beginning with D1, then U1, U2, C1 and C2. On the frong side Q1 and passive components first, then J1 and finally J2.
