@@ -6,7 +6,7 @@ Dongle STM8S001J3M3 with CH330N USB-UART - best with [STM8 eForth](https://githu
 
 The STM8S001J3M3 UART works in "half-duplex" mode (pin8 PD5/UART_TX) and the CH330N USB-UART is in a matching wired-or configuration (D1). The internal pull-up of PD5 should be active (this is the default for the STM8 eForth [STM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image).
 
-![dongle](doc/stm8s001ch330_ray.png)
+![image](https://user-images.githubusercontent.com/5466977/108121123-94e54b80-70a2-11eb-8323-c2e5c9b8575f.png)
 
 The SMD USB-A connector is "China standard" (e.g. [here](https://www.aliexpress.com/item/32900067411.html), refer to the BOM is in the docs folder).
 
@@ -33,8 +33,10 @@ Example use-cases:
 * Pins 1, 2 and 3 can control a [WS2812 LED strip](https://gist.github.com/TG9541/1761fa86b425a0c909b7bd1cc8017c2b)
 * [Learn programming Forth ...](https://github.com/TG9541/stm8ef/wiki/STM8-eForth-Programming)
 
-![pcb](doc/stm8s001ch330_copper.png)
+![dongle](doc/stm8s001ch330_ray.png)
 
 The PCB shouldn't be too difficult to populate by and hand. I recommend starting with D1, then U1, U2, C1 and C2. On the front side populate Q1 and passive components first, then J1 and finally J2. 
 
-In case the J1 breakouts aren't needed, the following subset of components is suffucient: U1, U2, D1, C1, C2, C3, C4 and J1.
+![pcb](doc/stm8s001ch330_copper.png)
+
+In case the J1 breakouts aren't needed, the following subset of components is sufficient: U1, U2, D1, C1, C2, C3, C4 and J1.
