@@ -1,8 +1,8 @@
-# USB Dongle STM8S001J3M3 w/ CH330N
+# STM8S001J3M3 with CH330N USB Serial Dongle 
 
 <a href="https://oshpark.com/shared_projects/cjOgBYNw"><img src="https://oshpark.com/packs/media/images/badge-5f4e3bf4bf68f72ff88bd92e0089e9cf.png" alt="Order from OSH Park"></img></a>
 
-Dongle STM8S001J3M3 with CH330N USB-UART - best with [STM8 eForth](https://github.com/TG9541/stm8ef).
+This is a design for a key-chain sized STM8S001J3M3 dongle with CH330N USB-UART - best used with [STM8 eForth](https://github.com/TG9541/stm8ef). It can be used for prototyping Forth software for a very low cost µC chip (it has 8K Flash memory, 1K RAM and up to 640 bytes EEPROM - the performance of this chip is typically > 20x that of an old-school 6502 µP).
 
 The STM8S001J3M3 UART works in "half-duplex" mode (pin8 PD5/UART_TX) and the CH330N USB-UART is in a matching wired-or configuration (D1). The internal pull-up of PD5 should be active (this is the default for the STM8 eForth [STM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image).
 
