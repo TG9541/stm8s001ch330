@@ -2,15 +2,17 @@
 
 <a href="https://oshpark.com/shared_projects/cjOgBYNw"><img src="https://oshpark.com/packs/media/images/badge-5f4e3bf4bf68f72ff88bd92e0089e9cf.png" alt="Order from OSH Park"></img></a>
 
-This is a design for an easy to make key-chain sized STM8S001J3M3 dongle with a CH330N USB-UART - best used with [STM8 eForth](https://github.com/TG9541/stm8ef). It can be used for prototyping software for this and other "Low density" STM8 µCs (8K Flash, 1K RAM, up to 640 bytes EEPROM - typical performance > 20x that of an 6502 µP).
-
-The STM8S001J3M3 UART works in "half-duplex" mode (`PD5/UART_TX`) and the CH330N USB-UART is in a matching wired-or configuration (D1). The internal pull-up of `PD5` should be active (this is the default for the STM8 eForth [STM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image). Note that this configuration allows IAP (in application programming) in Forth and ICP (in circuit programming) through `PD1/SWIM` both of which are on pin8 of the µC.
+This is a design for an easy to use and easy to make key-chain sized STM8S001J3M3 dongle with a CH330N USB-UART, e.g. for use with a standard serial terminal program. It's most fun to use with [STM8 eForth](https://github.com/TG9541/stm8ef) which makes it an interactive development environment. It can be a tiny programmable USB dongle, e.g. for interfacing I2C sensors. It can be used for prototyping software other "Low density" STM8 µCs (8K Flash, 1K RAM, up to 640 bytes EEPROM). As an benchmark to retro-computing affectionados: the typical performance is about "6502 @ >20MHz" and it's about as easy to program.
 
 ![image](https://user-images.githubusercontent.com/5466977/108121123-94e54b80-70a2-11eb-8323-c2e5c9b8575f.png)
 
-The SMD USB-A connector is the common type (e.g. [here](https://www.aliexpress.com/item/32900067411.html), refer to the BOM is in the docs folder).
+The STM8S001J3M3 UART works in "half-duplex" mode (`PD5/UART_TX`) and the CH330N USB-UART is in a matching wired-or configuration (D1). The internal pull-up of `PD5` should be active (this is the default for the STM8 eForth [STM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image). Note that this configuration allows IAP (in application programming) in Forth and ICP (in circuit programming) through `PD1/SWIM` both of which are on pin8 of the µC.
 
 ![schematics](doc/stm8s001ch330.png)
+
+The SMD USB-A connector is the common type (e.g. [here](https://www.aliexpress.com/item/32900067411.html), refer to the BOM is in the docs folder).
+
+![image](https://user-images.githubusercontent.com/5466977/142575242-bb4bb3ee-ec87-46c8-b525-e5a5aa4f14fc.png)
 
 ### Signals on Header J2
 
