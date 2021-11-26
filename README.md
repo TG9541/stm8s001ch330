@@ -2,15 +2,15 @@
 
 <a href="https://oshpark.com/shared_projects/cjOgBYNw"><img src="https://oshpark.com/packs/media/images/badge-5f4e3bf4bf68f72ff88bd92e0089e9cf.png" alt="Order from OSH Park"></img></a>
 
-This is a design for an easy to use and easy to make key-chain sized STM8S001J3M3 dongle with CH330N USB-UART, e.g. for [STM8 eForth](https://github.com/TG9541/stm8ef) which makes it an interactive development environment. It can also be used as a tiny programmable USB dongle, e.g. for interfacing I2C sensors, orfor prototyping software other "Low density" STM8 µCs (8K Flash, 1K RAM, up to 640 bytes EEPROM). As an benchmark to retro-computing affectionados: the typical performance is like a "6502 @ >20MHz" and it's about as easy to program.
+This is a design for an easy to use and easy to make key-chain sized STM8S001J3M3 dongle with CH330N USB-UART, e.g. for [STM8 eForth](https://github.com/TG9541/stm8ef) (which turns it into an interactive development environment). It can also be for interfacing, e.g., 1Wire or I2C sensors, as an IR-code transmitter, or prototyping software for "Low density" STM8S µCs (which all have 8K Flash, 1K RAM and 128-640 bytes EEPROM). If you're an 8bit computing and retro-computing affectionado: the typical performance is like a "6502 @ >20MHz" and it's about as easy to program.
 
 ![image](https://user-images.githubusercontent.com/5466977/108121123-94e54b80-70a2-11eb-8323-c2e5c9b8575f.png)
 
-The STM8S001J3M3 UART works in "half-duplex" mode (`PD5/UART_TX`) and the CH330N USB-UART is in a matching wired-or configuration (D1). The internal pull-up of `PD5` should be active (this is the default for the STM8 eForth [STM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image). Note that this configuration allows IAP (in application programming) in Forth and ICP (in circuit programming) through `PD1/SWIM` both of which are on pin8 of the µC.
+The STM8S001J3M3 UART works in "half-duplex" mode (`PD5/UART_TX`) with the CH330N USB-UART in wired-or configuration (D1). The internal pull-up of `PD5` should be active (the STM8 eForth [STM8S001J3](https://github.com/TG9541/stm8ef/tree/master/STM8S001J3) base image takes care of that). This configuration allows IAP (in application programming) in Forth and ICP (in circuit programming) through `PD1/SWIM` through pin8 of the µC.
 
 ![schematics](doc/stm8s001ch330.png)
 
-The SMD USB-A connector is common and easy to obtain (e.g. [here](https://www.aliexpress.com/item/32900067411.html), refer to the BOM is in the docs folder).
+All components, including the PCB and the SMD USB-A connector are easy to obtain (e.g. [here](https://www.aliexpress.com/item/32900067411.html) for the USB connector - refer to the BOM is in the docs folder).
 
 ![image](https://user-images.githubusercontent.com/5466977/142575242-bb4bb3ee-ec87-46c8-b525-e5a5aa4f14fc.png)
 
@@ -49,7 +49,7 @@ Note: the circuit relies on the USB port short-circuit protection!
 
 ### Populating the PCB
 
-The PCB is easy to populate by hand. I recommend starting with D1, then U1, U2, C1 and C2. On the front side populate Q1 and passive components first, then J1 and finally J2. 
+Populating the PCB by hand is easy. I recommend starting with D1, then U1, U2, C1 and C2. On the front side populate Q1 and the passive components first, then J1 and finally J2. 
 
 ![dongle](doc/stm8s001ch330_ray.png)
 
